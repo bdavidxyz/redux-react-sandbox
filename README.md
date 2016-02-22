@@ -10,8 +10,12 @@ with :
  - bootstrap3/less
  - react-router
 
- launch :
+ launch real :
   webpack-dev-server --progress --colors
 
- debug :
+ launch dumb
+ webpack-dev-server --progress --colors --config webpack.config.dumb.js --port 8081
+
+ experimental debug :
   npm run with-babel console.js
+
