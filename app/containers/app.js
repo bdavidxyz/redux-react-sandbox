@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TodoList from '../components/TodoList';
 
 class App extends React.Component {
   render() {
-    return <h1>HelloApp</h1>
+    return <TodoList/>
   }
 }
 
