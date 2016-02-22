@@ -12,3 +12,6 @@ with :
 
  launch :
   webpack-dev-server --progress --colors
+
+ debug :
+  npm run with-babel console.js

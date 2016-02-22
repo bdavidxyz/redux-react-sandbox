@@ -4,7 +4,8 @@
   "description": "todomvc from scratch with babel, webpack, react, bootstrap3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "with-babel": "babel-node"
   },
   "keywords": [
     "webpack",
@@ -21,10 +22,14 @@
     "redux": "3.2.1"
   },
   "devDependencies": {
+    "babel": "5.3.1",
     "babel-core": "6.4.5",
     "babel-loader": "6.2.1",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-react": "6.3.13",
-    "webpack": "1.12.12"
+    "webpack": "1.12.12",
+    "repl": "0.1.3",
+    "react-addons-test-utils": "0.14.0",
+    "react-element-to-jsx-string": "2.4.0"
   }
 }
