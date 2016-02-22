@@ -8,8 +8,8 @@ class TodoList extends Component {
 
     return (
       <ul>
-        {_.map(this.props.todos, i =>
-          <Todo key={i}/>
+        {_.map(this.props.todos, todo =>
+          <Todo key={todo.id} {...todo}/>
         )}
       </ul>
       )
