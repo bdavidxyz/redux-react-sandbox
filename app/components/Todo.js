@@ -3,12 +3,13 @@ import React, { Component, PropTypes } from 'react'
 class Todo extends Component {
 
   render() {
-    const { id } = this.props
+    const { id, completed } = this.props
+    let divStyle =  completed ? {'textDecoration': 'line-through'} : {}
     return (
-      <li>
-        iam a todo, with id {id}
+      <li style={divStyle}>
+      iam a todo, with id {id}
       </li>
-    )
+      )
   }
 }
 
