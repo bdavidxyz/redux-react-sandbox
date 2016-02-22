@@ -1,5 +1,5 @@
-import Hello from './components/Hello';
-import World from './components/World';
+import Hello from './app/containers/App';
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 
