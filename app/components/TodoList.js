@@ -1,23 +1,25 @@
 import React, { Component, PropTypes } from 'react'
+import Todo from './Todo.js'
 import _ from 'lodash'
 
 class TodoList extends Component {
 
   render() {
+
     return (
-      <li>
-        iam a todo
-      </li>
-    )
+      <ul>
+        {_.map(this.props.todos, i =>
+          <Todo key={i}/>
+        )}
+      </ul>
+      )
   }
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired
-  }).isRequired).isRequired,
+  todos: PropTypes.array.isRequired,
 }
+
+TodoList.defaultProps = { todos: [{id:1, completed:false, text:'iamdefaulttask'}] };
 
 export default TodoList
