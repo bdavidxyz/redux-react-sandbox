@@ -5,11 +5,11 @@ import _ from 'lodash'
 class TodoList extends Component {
 
   render() {
-
+    const {onDoubleClick} = this.props
     return (
-      <ul>
-        {_.map(this.props.todos, todo =>
-          <Todo key={todo.id} {...todo}/>
+      <ul onDoubleClick={onDoubleClick}>
+        {_.map(this.props.botros, todo =>
+          <Todo key={todo.id} {...todo} onMouseClick={() => {}} />
         )}
       </ul>
       )
@@ -17,9 +17,10 @@ class TodoList extends Component {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.array.isRequired,
+  botros: PropTypes.array.isRequired,
+  onDoubleClick:PropTypes.func
 }
 
-TodoList.defaultProps = { todos: [{id:1, completed:false, text:'iamdefaulttask'}] };
+TodoList.defaultProps = { botros: [{id:1, completed:false, text:'iamdefaulttask'}] };
 
 export default TodoList

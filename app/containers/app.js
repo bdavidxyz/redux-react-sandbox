@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TodoList from '../components/TodoList';
-import TodoList from '../containers/ClickableTodo';
+import SimpleContainer from '../containers/SimpleContainer';
+import ClickableTodo from '../containers/ClickableTodo';
+import ClickableTodos from '../containers/ClickableTodos';
 
 class App extends React.Component {
   render() {
-    return <ClickableTodo/>
+    return <ClickableTodos/>
   }
 }
 
