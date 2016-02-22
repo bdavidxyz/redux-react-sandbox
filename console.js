@@ -13,7 +13,7 @@ let replServer = repl.start({
 let renderer = createRenderer();
 let click = () => {callbackObj.a = !callbackObj.a;}
 renderer.render(<TodoList/>);
-//renderer.getRenderOutput().props.onClick();
+////renderer.getRenderOutput().props.onClick();
 
 replServer.context.renderer = renderer;
 replServer.context.to_s = reactElementToJSXString;
